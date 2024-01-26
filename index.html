@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Stijn Hemeltjen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cf1f895624.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">My Services</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Coding Dreams into Reality.<br>Stijn Hemeltjen</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ------------ About ------------  -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Greetings, I'm Stijn Hemeltjen, a Software Development student at the ROC of Twente. I am actively broadening my expertise in both web development and game development. My focus includes developing Unity 2D/3D games and applications using Visual Studio Code/Visual Studio 2022.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Game Development</span><br>Designing/Programming games</li>
+                        <li><span>Web Development</span><br>Designing/Programming websites</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - current</span><br>CNC milling and turning at Hogeling Metaal</li>
+                        <li><span>2018 - 2023</span><br>Producing handmade cycling tubulars at A-Dugast</li>
+                        <li><span>2020 - 2022</span><br>Customer employee at Action</li>
+                        <li><span>2019 - 2020</span><br>Dishwashing at Hotel Schout</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - current</span><br>Web development / Game development at ROC van Twente</li>
+                        <li><span>2018 - 2021</span><br>Studied HAVO at Twents Carmel College - de Thij</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------ Services ------------ -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>
+                    Elevate your online presence with expert web design that combines creativity and functionality, ensuring your digital space stands out and engages visitors effectively.</p>
+                <a href="services.html">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Game Design</h2>
+                <p>Embark on an immersive gaming journey with my specialized game design skills. Leveraging expertise in Unity 2D and 3D, I craft engaging virtual worlds to captivate and delight audiences.</p>
+                <a href="services.html">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-calendar-days"></i>
+                <h2>Scrum</h2>
+                <p>Navigate project success seamlessly with my Scrum mastery, ensuring efficient collaboration, streamlined workflows, and the successful realization of your goals through effective project management methodologies.</p>
+                <a href="services.html">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ------------ Portfolio ------------ -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png" onclick="showPopup()">
+                <div class="layer">
+                    <h2>Fleppy Geppy</h2>
+                    <p>Dive into a world where you need to dodge pipes and survive as long as possible!</p>
+                    <a href="#" onclick="showPopup(event)"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h2>Quantum Rush</h2>
+                    <p>Keep running until you can't no more!</p>
+                    <a href="quantum.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg" onclick="showPopup()">
+                <div class="layer">
+                    <h2>Coming soon...</h2>
+                    <p>What will it be...</p>
+                    <a href="#" onclick="showPopup(event)"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span>
+                    <p>I'm still working on this</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- ------------ Contact ------------ -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> stijnhemeltjen7@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 06-30975205</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/stijn-hemel-a944b8270/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/stijn_hemel/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/StijnHemeltjen"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://discord.com/channels/@me"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            
+                <div class="contact-right">
+                    <form onsubmit="sendMail(); reset(); return false;">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea id="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Send</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Stijn Hemeltjen - 2024</p>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "stijnhemeltjen7@gmail.com",
+            Password : "HetElferman518054!",
+            To : 'stijnhemeltjen7@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New contact from website",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
+    }
+</script>
+</body>
+</html>
